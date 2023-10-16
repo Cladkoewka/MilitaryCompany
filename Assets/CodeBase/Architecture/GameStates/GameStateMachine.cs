@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Assets.CodeBase.Architecture.Factory;
+using Assets.CodeBase.Services.PersistentProgress;
+using Assets.CodeBase.Services.SaveLoad;
+using Assets.CodeBase.Services.StaticData;
 using UnityEngine;
 using Zenject;
 
@@ -11,13 +15,13 @@ namespace Assets.CodeBase.Architecture.GameStates
         private IExitableState _activeState;
         
         [Inject]
-        public GameStateMachine(SceneLoader sceneLoader)
+        public GameStateMachine(SceneLoader sceneLoader, IGameFactory gameFactory, IPersistentProgressService progressService, IStaticDataService staticDataService, ISaveLoadService saveLoadService)
         {
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader),
-                [typeof(LoadProgressState)] = new LoadProgressState(this),
+                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, gameFactory, progressService, staticDataService),
+                [typeof(LoadProgressState)] = new LoadProgressState(this, progressService, saveLoadService),
                 [typeof(GameLoopState)] = new GameLoopState(this),
             };
         }

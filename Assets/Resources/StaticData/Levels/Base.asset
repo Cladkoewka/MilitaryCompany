@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a4fd72b61998b41bb471a86b303011, type: 3}
+  m_Name: Base
+  m_EditorClassIdentifier: 
+  LevelKey: Base
+  UnitSpawners:
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -0.9019453, y: 0, z: -0.42580605}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -17.301947, y: 0, z: -19.325806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 19.598055, y: 0, z: -18.425806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: 22.59, y: 0, z: 2.5500002}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -20.2, y: 0, z: 18.9}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -0.100000024, y: 0, z: 18.8}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 0.49805474, y: 0, z: -19.025806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -23.109999, y: 0, z: 3.8500001}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 11.598055, y: 0, z: -8.125807}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -19.4, y: 0, z: -7.8999996}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: 18.1, y: 0, z: 19.4}

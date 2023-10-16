@@ -14,6 +14,8 @@ namespace Assets.CodeBase.Architecture.GameStates
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
+            
+            RegisterServices();
         }
 
         public void Enter()
@@ -31,5 +33,15 @@ namespace Assets.CodeBase.Architecture.GameStates
 
         private void EnterLoadLevel() =>
             _stateMachine.Enter<LoadProgressState>();
+
+        private void RegisterServices()
+        {
+            RegisterStaticDataService();
+        }
+
+        private void RegisterStaticDataService()
+        {
+            
+        }
     }
 }

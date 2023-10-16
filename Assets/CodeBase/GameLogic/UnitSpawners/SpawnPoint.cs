@@ -52,7 +52,8 @@ namespace Assets.CodeBase.GameLogic.UnitSpawners
             if (_unitDeath != null)
                 _unitDeath.Died -= Slay;
       
-            _slain = true;
+            Spawn();
+            //_slain = true;
         }
     }
 }

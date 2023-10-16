@@ -2,7 +2,8 @@
 {
     public enum UnitTypeId
     {
-        Stormtrooper = 1,
+        EnemyStormtrooper = 1,
+        PlayerStormtrooper = 2,
         
     }
 }

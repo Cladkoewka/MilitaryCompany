@@ -17,18 +17,12 @@ namespace Assets.CodeBase.GameLogic.Units
         private bool _isAttacking = false;
         private bool _attackIsActive = true;
         
+        
         private ICombatService _combatService;
 
-        /*[Inject]
-        private void Construct(ICombatService combatService)
+        public void Construct(ICombatService combatService)
         {
-            Debug.Log("UnitAttackInject");
             _combatService = combatService;
-        }*/
-
-        private void Start()
-        {
-            _combatService = FindObjectOfType<CombatService>();
         }
 
         private void Update()
@@ -53,6 +47,7 @@ namespace Assets.CodeBase.GameLogic.Units
         
         private void StartAttack()
         {
+            Debug.Log(_combatService);
             Unit targetToAttack = _combatService.FindNearestTarget(this.GetComponent<Unit>());
             if (targetToAttack)
             {
@@ -60,7 +55,6 @@ namespace Assets.CodeBase.GameLogic.Units
                 targetToAttack.GetComponent<IHealth>().TakeDamage(Damage);
             }
             _attackCooldown = AttackCooldown;
-            Debug.Log(gameObject.name + "Я атакую");
         }
     }
 }

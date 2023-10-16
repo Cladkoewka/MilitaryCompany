@@ -7,11 +7,11 @@ namespace Assets.CodeBase.Architecture
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {
         [Inject]
-        private Game _game;
+        private GameStateMachine _gameStateMachine;
 
         private void Awake()
         {
-            _game.StateMachine.Enter<BootstrapState>();
+            _gameStateMachine.Enter<BootstrapState>();
             DontDestroyOnLoad(this);
         }
     }

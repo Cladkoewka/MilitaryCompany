@@ -7,6 +7,6 @@ namespace Assets.CodeBase.StaticData
     public class LevelStaticData : ScriptableObject
     {
         public string LevelKey;
-        public List<UnitSpawnerStaticData> EnemySpawners;
+        public List<UnitSpawnerStaticData> UnitSpawners;
     }
 }

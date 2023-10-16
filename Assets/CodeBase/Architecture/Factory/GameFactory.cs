@@ -2,6 +2,7 @@
 using Assets.CodeBase.Architecture.AssetManagement;
 using Assets.CodeBase.GameLogic.Units;
 using Assets.CodeBase.GameLogic.UnitSpawners;
+using Assets.CodeBase.Services.CombatService;
 using Assets.CodeBase.Services.PersistentProgress;
 using Assets.CodeBase.Services.StaticData;
 using Assets.CodeBase.StaticData;
@@ -16,13 +17,15 @@ namespace Assets.CodeBase.Architecture.Factory
         public List<ISavedProgress> ProgressWriters { get; } = new List<ISavedProgress>();
         
         private readonly IStaticDataService _staticData;
+        private readonly ICombatService _combatService;
         private readonly IAssetProvider _assets;
 
         
-        public GameFactory(IAssetProvider assets, IStaticDataService staticData)
+        public GameFactory(IAssetProvider assets, IStaticDataService staticData, ICombatService combatService)
         {
             _assets = assets;
             _staticData = staticData;
+            _combatService = combatService;
         }
         
         public GameObject CreateUnit(UnitTypeId typeId, Transform parent)
@@ -38,13 +41,20 @@ namespace Assets.CodeBase.Architecture.Factory
             UnitAttack attack = unit.GetComponent<UnitAttack>();
             attack.Damage = unitData.Damage;
             attack.EffectiveDistance = unitData.EffectiveDistance;
+            
+            unit.GetComponent<UnitAttack>().Construct(_combatService);
+            unit.GetComponent<UnitDeath>().Construct(_combatService);
 
             return unit;
         }
 
-        public void CreateSpawner(string spawnerId, Vector3 at, UnitTypeId monsterTypeId)
+        public void CreateSpawner(string spawnerId, Vector3 at, UnitTypeId unitTypeId)
         {
             SpawnPoint spawner = InstantiateRegistered(AssetPath.Spawner, at).GetComponent<SpawnPoint>();
+            
+            spawner.Construct(this);
+            spawner.UnitTypeId = unitTypeId;
+            spawner.Id = spawnerId;
         }
 
         public void Cleanup()

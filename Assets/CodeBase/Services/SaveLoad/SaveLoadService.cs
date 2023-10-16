@@ -1,6 +1,7 @@
 ﻿using Assets.CodeBase.Architecture.Factory;
 using Assets.CodeBase.Data;
 using Assets.CodeBase.Services.PersistentProgress;
+using UnityEngine;
 
 namespace Assets.CodeBase.Services.SaveLoad
 {
@@ -19,12 +20,16 @@ namespace Assets.CodeBase.Services.SaveLoad
         
         public void SaveProgress()
         {
-            throw new System.NotImplementedException();
+            foreach (ISavedProgress progressWriter in _gameFactory.ProgressWriters)
+                progressWriter.UpdateProgress(_progressService.Progress);
+            
+            PlayerPrefs.SetString(ProgressKey, _progressService.Progress.ToJson());
         }
 
         public PlayerProgress LoadProgress()
         {
-            throw new System.NotImplementedException();
+            return PlayerPrefs.GetString(ProgressKey)?
+                .ToDeserialized<PlayerProgress>();
         }
     }
 }

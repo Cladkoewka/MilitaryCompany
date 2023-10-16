@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80830d460dd44fd4081bbc01807b921f, type: 3}
+  m_Name: PlayerStormtrooper
+  m_EditorClassIdentifier: 
+  UnitTypeId: 2
+  Hp: 50
+  Damage: 10
+  EffectiveDistance: 3
+  MoveSpeed: 3
+  Prefab: {fileID: 5891506442883995758, guid: 6ab36a380166df94ab9db3ac5f628162, type: 3}

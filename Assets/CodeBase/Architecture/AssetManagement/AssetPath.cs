@@ -2,6 +2,6 @@
 {
     public class AssetPath
     {
-        public const string Spawner = "Enemies/SpawnPoint";
+        public const string Spawner = "Units/SpawnPoint";
     }
 }

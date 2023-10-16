@@ -13,19 +13,18 @@ namespace Assets.CodeBase.GameLogic.Units
 
         public event Action<Unit> Died;
         
+
         private ICombatService _combatService;
 
-        /*[Inject]
-        private void Construct(ICombatService combatService)
+        public void Construct(ICombatService combatService)
         {
-            Debug.Log("UnitDeathInject");
             _combatService = combatService;
-        }*/
+        }
         
         private void Start()
         {
             Health.HealthChanged += OnHealthChanged;
-            _combatService = FindObjectOfType<CombatService>();
+            //_combatService = FindObjectOfType<CombatService>();
         }
 
         private void OnDestroy()
@@ -50,7 +49,7 @@ namespace Assets.CodeBase.GameLogic.Units
         
         private IEnumerator DestroyTimer()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0);
             Destroy(gameObject);
         }
     }

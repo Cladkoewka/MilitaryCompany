@@ -18,7 +18,7 @@ namespace Assets.CodeBase.Services.CombatService
             }
             else
             {
-                unitsToSearch = GetEnemyUnits();
+                unitsToSearch = GetPlayerUnits();
             }
             return FindNearestTarget(unit.transform.position, unitsToSearch);
         }
