@@ -42,8 +42,10 @@ namespace Assets.CodeBase.Architecture.Factory
             attack.Damage = unitData.Damage;
             attack.EffectiveDistance = unitData.EffectiveDistance;
             
+            _combatService.AddUnit(unit.GetComponent<Unit>());
             unit.GetComponent<UnitAttack>().Construct(_combatService);
             unit.GetComponent<UnitDeath>().Construct(_combatService);
+            unit.GetComponent<AgentMoveToTarget>().Construct(_combatService);
 
             return unit;
         }

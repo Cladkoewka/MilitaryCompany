@@ -3,6 +3,7 @@ using Assets.CodeBase.Services.CombatService;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 namespace Assets.CodeBase.GameLogic.Units
 {
@@ -16,16 +17,9 @@ namespace Assets.CodeBase.GameLogic.Units
         
         private ICombatService _combatService;
 
-        /*[Inject]
-        private void Construct(ICombatService combatService)
+        public void Construct(ICombatService combatService)
         {
-            Debug.Log("UnitAttackInject");
             _combatService = combatService;
-        }*/
-        
-        private void Start()
-        {
-            _combatService = FindObjectOfType<CombatService>();
         }
         
         private void Update()

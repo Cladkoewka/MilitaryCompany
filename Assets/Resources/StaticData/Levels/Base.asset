@@ -16,34 +16,73 @@ MonoBehaviour:
   UnitSpawners:
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 2
-    Position: {x: -0.9019453, y: 0, z: -0.42580605}
-  - Id: x.GetComponent<UniqueId>().Id
-    MonsterTypeId: 2
-    Position: {x: -17.301947, y: 0, z: -19.325806}
-  - Id: x.GetComponent<UniqueId>().Id
-    MonsterTypeId: 2
-    Position: {x: 19.598055, y: 0, z: -18.425806}
+    Position: {x: -7.7519455, y: 0, z: 4.0441933}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 1
-    Position: {x: 22.59, y: 0, z: 2.5500002}
+    Position: {x: 8.42, y: 0, z: 11.55}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 1
-    Position: {x: -20.2, y: 0, z: 18.9}
+    Position: {x: 2.1200001, y: 0, z: -14.32}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 8.558055, y: 0, z: 14.114193}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 10.048055, y: 0, z: 4.2941933}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 1
     Position: {x: -0.100000024, y: 0, z: 18.8}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 2
-    Position: {x: 0.49805474, y: 0, z: -19.025806}
-  - Id: x.GetComponent<UniqueId>().Id
-    MonsterTypeId: 1
-    Position: {x: -23.109999, y: 0, z: 3.8500001}
+    Position: {x: 10.898055, y: 0, z: -8.725806}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 2
-    Position: {x: 11.598055, y: 0, z: -8.125807}
+    Position: {x: -11.121945, y: 0, z: -12.225806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -0.9019453, y: 0, z: -0.42580605}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 19.598055, y: 0, z: -18.425806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -15.61, y: 0, z: -12.33}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -20.75, y: 0, z: -1.6299996}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -20.2, y: 0, z: 18.9}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: 22.59, y: 0, z: 2.5500002}
   - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 2
     Position: {x: -19.4, y: 0, z: -7.8999996}
   - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 11.598055, y: 0, z: -8.125807}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: 14.29, y: 0, z: -6.35}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: 0.49805474, y: 0, z: -19.025806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -17.301947, y: 0, z: -19.325806}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -10.57, y: 0, z: 10.56}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: -23.109999, y: 0, z: 3.8500001}
+  - Id: x.GetComponent<UniqueId>().Id
     MonsterTypeId: 1
     Position: {x: 18.1, y: 0, z: 19.4}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 1
+    Position: {x: 16.470001, y: 0, z: 12.05}
+  - Id: x.GetComponent<UniqueId>().Id
+    MonsterTypeId: 2
+    Position: {x: -12.121945, y: 0, z: 12.174194}

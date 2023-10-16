@@ -7,14 +7,6 @@ namespace Assets.CodeBase.GameLogic.Units
     {
         private void Start()
         {
-            // Получите ссылку на CombatService, например, с помощью FindObjectOfType
-            CombatService combatService = FindObjectOfType<CombatService>();
-
-            // Если combatService не равен null, добавьте этот юнит в список
-            if (combatService != null)
-            {
-                combatService.AddUnit(this);
-            }
         }
     }
 }

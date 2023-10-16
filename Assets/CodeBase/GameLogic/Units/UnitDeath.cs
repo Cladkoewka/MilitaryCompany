@@ -24,7 +24,6 @@ namespace Assets.CodeBase.GameLogic.Units
         private void Start()
         {
             Health.HealthChanged += OnHealthChanged;
-            //_combatService = FindObjectOfType<CombatService>();
         }
 
         private void OnDestroy()

@@ -17,7 +17,6 @@ namespace Assets.CodeBase.GameLogic.Units
         private bool _isAttacking = false;
         private bool _attackIsActive = true;
         
-        
         private ICombatService _combatService;
 
         public void Construct(ICombatService combatService)
@@ -47,7 +46,6 @@ namespace Assets.CodeBase.GameLogic.Units
         
         private void StartAttack()
         {
-            Debug.Log(_combatService);
             Unit targetToAttack = _combatService.FindNearestTarget(this.GetComponent<Unit>());
             if (targetToAttack)
             {

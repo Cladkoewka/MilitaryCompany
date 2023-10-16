@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.CodeBase.Services.CombatService
 {
-    public class CombatService : MonoBehaviour, ICombatService
+    public class CombatService : ICombatService
     {
         private List<Unit> _allUnits = new List<Unit>();
         
